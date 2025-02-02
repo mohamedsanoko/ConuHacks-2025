@@ -1,9 +1,4 @@
-/*--------------------------------
 
-LineIcons Free Web Font
-Author: lineicons.com
-
--------------------------------- */
 @font-face {
   font-family: 'LineIcons';
   src: url('../fonts/LineIcons.eot');
@@ -11,38 +6,31 @@ Author: lineicons.com
   font-weight: normal;
   font-style: normal;
 }
-/*------------------------
-	base class definition
--------------------------*/
+
 .lni {
   display: inline-block;
   font: normal normal normal 1em/1 'LineIcons';
   speak: none;
   text-transform: none;
-  /* Better Font Rendering */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*------------------------
-  change icon size
--------------------------*/
-/* relative units */
+
 .lni-sm {
   font-size: 0.8em;
 }
 .lni-lg {
   font-size: 1.2em;
 }
-/* absolute units */
+
 .lni-16 {
   font-size: 16px;
 }
 .lni-32 {
   font-size: 32px;
 }
-/*----------------------------------
-  add a square/circle background
------------------------------------*/
+
 .lni-bg-square,
 .lni-bg-circle {
   padding: 0.35em;
@@ -51,9 +39,7 @@ Author: lineicons.com
 .lni-bg-circle {
   border-radius: 50%;
 }
-/*------------------------------------
-  use icons as list item markers
--------------------------------------*/
+
 .lni-ul {
   padding-left: 0;
   list-style-type: none;
@@ -67,9 +53,7 @@ Author: lineicons.com
   margin-right: 0.4em;
   line-height: inherit;
 }
-/*------------------------
-  spinning icons
--------------------------*/
+
 .lni-is-spinning {
   -webkit-animation: lni-spin 2s infinite linear;
   -moz-animation: lni-spin 2s infinite linear;
@@ -150,9 +134,7 @@ Author: lineicons.com
   -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-/*------------------------
-	icons
--------------------------*/
+
 
 .lni-500px::before {
   content: "\ea02";
