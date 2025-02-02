@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.png') }}" type="image/png">
+    <title>Straight Up</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/tailwind.css') }}">
+    <style>
+        * {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header-wrap" class="relative">
+        <div class="navigation fixed top-0 left-0 w-full z-30 duration-300">
+            <div class="container">
+                <nav class="navbar py-2 navbar-expand-lg flex justify-between items-center relative duration-300">
+                    <a class="navbar-brand" href="{{ url_for('main') }}">
+                        <p>STRAIGHTUP</p>
+                    </a>
+                    <button class="navbar-toggler focus:outline-none block lg:hidden" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse hidden lg:block duration-300 shadow absolute top-100 left-0 mt-full bg-white z-20 px-5 py-3 w-full lg:static lg:bg-transparent lg:shadow-none" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto justify-center items-center lg:flex">
+                            <li class="nav-item">
+                                <a class="page-scroll active" href="#hero-area">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
+                        <a class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white" href="#feature">Learn</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="hero-area" class="bg-blue-100 pt-48 pb-10">
+        <div class="container">
+            <div class="flex justify-between">
+                <div class="w-full text-center">
+                    <h2 class="text-5xl font-extrabold leading-tight text-gray-800 mb-10 tracking-tight md:text-6xl wow fadeInUp animated" data-wow-delay="1s">
+                        STRAIGHTUP
+                        <br class="hidden lg:block">
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">A health and wellness app designed to help you maintain proper posture while working or studying.<br> Improve your comfort and well-being with regular reminders and posture feedback.</p>
+                    <div class="text-center mb-10 wow fadeInUp animated" data-wow-delay="1.2s">
+                        <a href="{{ url_for('index') }}" class="btn">Start Now</a>
+                    </div>
+                    <div class="text-center wow fadeInUp animated" data-wow-delay="1.6s">
+                        <img class="img-fluid mx-auto" src="{{ url_for('static', filename='assets/img/hero.svg') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

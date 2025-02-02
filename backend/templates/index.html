@@ -1,39 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StraightUp</title>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.png') }}" type="image/png">
+    <title>Straight Up - Video Feed</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/tailwind.css') }}">
     <style>
-     
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f4f4f9;
-        font-family: Arial, sans-serif;
-      }
-
-      h1 {
-        position: absolute;
-        top: 20px;
-        font-size: 2.5rem;
-        text-align: center;
-        width: 100%;
-        color: #333;
-      }
-
-      img {
-        border: 3px solid #333;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
+        * {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e2e8f0;
+        }
+        .video-feed {
+            width: 100%; /* Make it take up full width of the container */
+            max-width: 960px; /* Set a maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(222, 216, 216, 0.2);
+            object-fit: cover; /* Ensures the image covers the area */
+        }
+        .video-container {
+            max-width: 100%; /* Prevent overflow */
+            margin: 0 auto; /* Center the container */
+            padding: 0 15px; /* Add some padding for responsiveness */
+        }
     </style>
-  </head>
-  <body>
-    <h1>StraightUp</h1>
-    <img src="{{ url_for('video_feed') }}" width="640" height="480" />
-  </body>
+</head>
+<body>
+  <header id="header-wrap" class="relative">
+    <div class="navigation fixed top-0 left-0 w-full z-30 duration-300">
+        <div class="container">
+            <nav class="navbar py-2 navbar-expand-lg flex justify-between items-center relative duration-300 ">
+              <div>
+                <a class="navbar-brand px-20 border-black"  href="{{ url_for('main') }}">
+                  <p>STRAIGHTUP</p>
+              </a>
+              </div>
+               
+                <button class="navbar-toggler focus:outline-none block lg:hidden" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse hidden lg:block duration-300 shadow absolute top-100 left-0 mt-full bg-white z-20 px-5 py-3 w-full lg:static lg:bg-transparent lg:shadow-none" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto justify-center items-center lg:flex">
+                        <li class="nav-item">
+                            <a class="page-scroll active" href="#hero-area">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
+                    <a class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white" href="#feature">Learn</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    
+  <section id = "hero-area" class="bg-blue-100 pt-48 pb-10">
+    <div class="container mx-auto">
+        <div class="text-center">
+          <h2 class="text-5xl font-extrabold leading-tight text-gray-800 mb-10 tracking-tight md:text-6xl wow fadeInUp animated" data-wow-delay="1s">
+            STAND RIGHT, FEEL BRIGHT
+            <br class="hidden lg:block">
+        </h2>
+            <div class="video-container">
+                <img class="video-feed mx-auto" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Posture Analysis Feed">
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="bg-blue-100 pt-48 pb-10"></section>
+</body>
 </html>

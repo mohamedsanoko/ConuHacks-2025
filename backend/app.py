@@ -7,6 +7,7 @@ import pyttsx3
 import pygame
 import pyttsx3
 import threading
+import time
 
 from gtts import gTTS
 import os
@@ -25,15 +26,30 @@ pygame.mixer.init()
 
 cap = cv2.VideoCapture(0)
 
-music_file = "/Users/sydneycampbell/Desktop/Winter_Semester_2025/CONU-25/ConuHacks-2025/backend/music/Music Sounds Better With You (Darren After 2022 Edit) - Stardust.wav"
+music_file = "/Users/sydneycampbell/Desktop/Winter_Semester_2025/CONU-25/ConuHacks-2025/Music Sounds Better With You (Darren After 2022 Edit) - Stardust.wav"
 pygame.mixer.music.load(music_file)
 
 
+
+
+def start_timer():
+    start_time = time.time()
+    while True:
+        elapsed_time = time.time() - start_time
+        remaining_time = 60 - elapsed_time
+        if remaining_time <= 0:
+            
+            move_your_body() 
+            break
+        time.sleep(1)  
+        print(f"Time remaining: {int(remaining_time)}s") 
+
 def play_music():
-    
+  
     pygame.mixer.music.play()
     time.sleep(20)
     pygame.mixer.music.stop()
+
 
 
 def speak(text):
@@ -76,6 +92,8 @@ def move_your_body():
     
     music_thread = threading.Thread(target=play_music)
     music_thread.start()
+ 
+
  
 def get_back_to_work():
     message = "Time is up! Get back to work"   
@@ -124,6 +142,8 @@ class PostureTracker:
             self.alert_state = False
             
         return self.bad_posture_time, self.alert_state
+    
+
 
 def generate_frames():
     posture_tracker = PostureTracker()
@@ -135,6 +155,8 @@ def generate_frames():
             
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         results = pose.process(rgb_frame)
+
+       
         
         if results.pose_landmarks:
             landmarks = results.pose_landmarks.landmark
@@ -197,14 +219,25 @@ def generate_frames():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
+def video_feed_with_timer():
+ 
+    timer_thread = threading.Thread(target=start_timer)
+    timer_thread.start()
+    return Response(generate_frames(),
+                   mimetype='multipart/x-mixed-replace; boundary=frame')
+
 @app.route('/')
+def main():
+    get_back_to_work()
+    return render_template('main.html')
+
+@app.route('/start')
 def index():
     return render_template('index.html')
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(generate_frames(),
-                   mimetype='multipart/x-mixed-replace; boundary=frame')
+    return video_feed_with_timer()
 
 
 if __name__ == '__main__':
