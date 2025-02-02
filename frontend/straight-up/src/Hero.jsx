@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 px-6">
-      {/* Hero Container */}
+
       <div className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-300">
         <h1 className="text-5xl font-extrabold mb-4 text-gray-700">
           Improve Your Posture
