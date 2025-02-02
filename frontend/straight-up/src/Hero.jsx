@@ -1,63 +1,20 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Hero = () => {
   return (
-    <div className="relative text-center">
-      <Carousel
-        showThumbs={false}
-        infiniteLoop
-        autoPlay
-        interval={5000}
-        showStatus={false}
-        className="mt-4"
-      >
-
-        <div className="relative">
-          <img
-            src="https://th.bing.com/th/id/R.2e40b892590b28f8d2873f771c371aa7?rik=USeFIzmdmifQTg&pid=ImgRaw&r=0"
-            alt="Stay Healthy"
-            className="w-full h-96 object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
-            <p className="text-white text-3xl font-bold mb-4">Stay Healthy While Working</p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">
-              Improve Posture Now!
-            </button>
-          </div>
-        </div>
-
-
-        <div className="relative">
-          <img
-            src="https://th.bing.com/th/id/R.fed7c56fea7b7bab121503eb62e1c14e?rik=nlTlKVT7pW6Kgg&pid=ImgRaw&r=0"
-            alt="Take Breaks"
-            className="w-full h-96 object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
-            <p className="text-white text-3xl font-bold mb-4">Take Breaks Regularly</p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">
-              Learn More
-            </button>
-          </div>
-        </div>
-
-
-        <div className="relative">
-          <img
-            src="https://th.bing.com/th/id/R.26ac2666f1ac3949b529b2db5aef3e93?rik=fldbp4sFPN65ug&pid=ImgRaw&r=0"
-            alt="Stay Hydrated"
-            className="w-full h-96 object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
-            <p className="text-white text-3xl font-bold mb-4">Drink Water and Stay Hydrated</p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">
-              Hydration Tips
-            </button>
-          </div>
-        </div>
-      </Carousel>
+    <div className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 px-6">
+      {/* Hero Container */}
+      <div className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-300">
+        <h1 className="text-5xl font-extrabold mb-4 text-gray-700">
+          Improve Your Posture
+        </h1>
+        <p className="text-lg max-w-xl text-center text-gray-500 mb-6">
+          Stay aware of your posture with real-time feedback. Reduce back pain, improve productivity, and maintain a healthier lifestyle.
+        </p>
+        <button className="mt-4 bg-blue-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-inner shadow-blue-300 hover:shadow-blue-400 hover:bg-blue-600 transition-all duration-300">
+          Start Now
+        </button>
+      </div>
     </div>
   );
 };
