@@ -2,22 +2,28 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 p-4 flex justify-between items-center w-full shadow-lg">
+    <nav className="bg-white p-4 rounded-3xl shadow-lg shadow-gray-300 mx-6 mt-4 flex justify-between items-center">
 
-      <div className="text-3xl font-extrabold text-white cursor-pointer hover:text-gray-300 transition duration-300">
+      <div className="text-2xl font-extrabold text-gray-700 cursor-pointer hover:opacity-80 transition duration-300">
         Straight-Up
       </div>
 
 
-      <div className="hidden md:flex gap-6 text-lg text-white">
-        <a href="#features" className="hover:text-gray-300 transition duration-300">Features</a>
-        <a href="#about" className="hover:text-gray-300 transition duration-300">About</a>
-        <a href="#contact" className="hover:text-gray-300 transition duration-300">Contact</a>
+      <div className="hidden md:flex gap-8 text-lg text-gray-600">
+        <a href="#features" className="hover:text-gray-700 transition duration-300">
+          Features
+        </a>
+        <a href="#about" className="hover:text-gray-700 transition duration-300">
+          About
+        </a>
+        <a href="#contact" className="hover:text-gray-700 transition duration-300">
+          Contact
+        </a>
       </div>
 
 
       <div>
-        <button className="bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition duration-300">
+        <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold shadow-inner shadow-blue-300 hover:bg-blue-600 hover:shadow-blue-400 transition-all duration-300">
           Get Started
         </button>
       </div>
