@@ -3,7 +3,7 @@
 ## Demo Video
 https://youtu.be/S_ZlMJUoMLU
 
-#Inspiration
+# Inspiration
 
 Do you work in tech? Do you work long hours every day? Does your back hurt?
 
@@ -11,7 +11,7 @@ We’ve all experienced neck pain, back pain, and fatigue from sitting in front 
 
 We wanted to build a simple, AI-powered solution that keeps you aware of your posture in real-time! Without needing wearable devices or expensive ergonomic setups.
 
-#What It Does
+# What It Does
 
 StraightUp is an AI powered posture tracking system that:
 
@@ -22,7 +22,7 @@ Works entirely in your browser no extra hardware needed.
 Dancing sessions after 20 minutes of good posture to keep the blood flowing.
 How We Built It
 
-###Backend: Flask, OpenCV, and Mediapipe for real-time body tracking.
+### Backend: Flask, OpenCV, and Mediapipe for real-time body tracking.
 Frontend: Served through Flask with dynamic HTML, CSS, and JavaScript.
 AI Model: Mediapipe's Pose Estimation framework for detecting posture deviations.
 Deployment: Runs on any computer with a webcam no installation required.
