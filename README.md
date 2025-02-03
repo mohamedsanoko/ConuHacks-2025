@@ -23,11 +23,12 @@ Dancing sessions after 20 minutes of good posture to keep the blood flowing.
 How We Built It
 
 ### Backend: Flask, OpenCV, and Mediapipe for real-time body tracking.
-Frontend: Served through Flask with dynamic HTML, CSS, and JavaScript.
-AI Model: Mediapipe's Pose Estimation framework for detecting posture deviations.
-Deployment: Runs on any computer with a webcam no installation required.
+### Frontend: Served through Flask with dynamic HTML, CSS, and JavaScript.
+### AI Model: Mediapipe's Pose Estimation framework for detecting posture deviations.
+### Deployment: Runs on any computer with a webcam no installation required.
 gTTS Voice over assistant used to tell if the user is slouched.
-Challenges We Ran Into
+
+# Challenges We Ran Into
 
 Webcam Latency Optimizing the video stream while keeping real-time processing smooth.
 Posture Detection Accuracy Fine-tuning the detection logic to reduce false alerts.
