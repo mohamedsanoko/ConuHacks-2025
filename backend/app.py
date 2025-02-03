@@ -26,7 +26,7 @@ pygame.mixer.init()
 
 cap = cv2.VideoCapture(0)
 
-music_file = "/Users/sydneycampbell/Desktop/Winter_Semester_2025/CONU-25/ConuHacks-2025/Music Sounds Better With You (Darren After 2022 Edit) - Stardust.wav"
+music_file = "/Stardust.wav"
 pygame.mixer.music.load(music_file)
 
 
